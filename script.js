@@ -15,3 +15,9 @@ function getComputerChoice() {
             return "rock";
     }
 }
+
+function getHumanChoice() {
+    return prompt("Enter your choice:").toLowerCase();
+}
+
+console.log(getHumanChoice());
