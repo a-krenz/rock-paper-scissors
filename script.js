@@ -40,3 +40,18 @@ function playRound(humanChoice, computerChoice) {
         console.log("Your input could not be interpreted. Computer wins.");
     }
 }
+
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+
+    if (humanScore > computerScore) {
+        console.log(`You win with a score of ${humanScore}!`);
+    } else {
+        console.log(`You lose to the computer. Your score is ${humanScore}.`);
+    }
+}
