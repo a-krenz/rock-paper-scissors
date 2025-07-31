@@ -47,9 +47,16 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
+    let roundWinner;
 
     for (let i = 0; i < 5; i++) {
-        playRound(getHumanChoice(), getComputerChoice());
+        roundWinner = playRound(getHumanChoice(), getComputerChoice());
+
+        if (roundWinner === "human") {
+            humanScore++;
+        } else {
+            computerScore++;
+        }
     }
 
     if (humanScore > computerScore) {
