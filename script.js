@@ -57,8 +57,10 @@ function playGame() {
 
         if (roundWinner === "human") {
             humanScore++;
-        } else {
+        } else if (roundWinner === "computer") {
             computerScore++;
+        } else {
+            i--;
         }
     }
 
