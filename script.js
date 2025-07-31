@@ -38,6 +38,9 @@ function playRound(humanChoice, computerChoice) {
     ) {
         console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
         return "computer";
+    } else if (humanChoice === computerChoice) {
+        console.log("Tie! No one scores.");
+        return "tie";
     } else {
         console.log("Your input could not be interpreted. Computer wins.");
         return "computer";
