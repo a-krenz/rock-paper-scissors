@@ -70,3 +70,5 @@ function playGame() {
         console.log(`You lose to the computer. Your score is ${humanScore}.`);
     }
 }
+
+playGame();
