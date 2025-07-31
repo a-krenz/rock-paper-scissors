@@ -17,7 +17,5 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    return prompt("Enter your choice:").toLowerCase();
+    return prompt("Enter your choice:");
 }
-
-console.log(getHumanChoice());
