@@ -3,16 +3,16 @@ function getComputerChoice() {
 
     switch (rnd) {
         case 0:
-            return "rock";
+            return "Rock";
             break;
         case 1:
-            return "paper";
+            return "Paper";
             break;
         case 2:
-            return "scissors";
+            return "Scissors";
             break;
         default:
-            return "rock";
+            return "Rock";
     }
 }
 
