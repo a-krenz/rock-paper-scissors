@@ -30,14 +30,17 @@ function playRound(humanChoice, computerChoice) {
         humanChoice === "Scissors" && computerChoice === "Paper"
     ) {
         console.log(`You win! ${humanChoice} beats ${computerChoice}.}`);
+        return "human";
     } else if (
         humanChoice === "Rock" && computerChoice === "Paper" ||
         humanChoice === "Paper" && computerChoice === "Scissors" ||
         humanChoice === "Scissors" && computerChoice === "Rock"
     ) {
         console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+        return "computer";
     } else {
         console.log("Your input could not be interpreted. Computer wins.");
+        return "computer";
     }
 }
 
