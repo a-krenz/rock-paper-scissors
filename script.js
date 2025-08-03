@@ -43,10 +43,22 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-
 const buttons = document.querySelectorAll("button");
+const human = document.querySelector("#human");
+const computer = document.querySelector("#computer");
+
+let humanScore = 0;
+let computerScore = 0;
+
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        playRound(button.id, getComputerChoice())
+        const roundWinner = playRound(button.id, getComputerChoice());
+        if (roundWinner == "computer") {
+            computerScore++;
+            computer.textContent = `Computer Score: ${computerScore}`;
+        } else if (roundWinner == "human") {
+            humanScore++;
+            human.textContent = `Your Score: ${humanScore}`;
+        }
     });
 });
