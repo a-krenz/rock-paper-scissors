@@ -22,6 +22,7 @@ function getHumanChoice() {
 
 
 function playRound(humanChoice, computerChoice) {
+    const results = document.querySelector("#results");
     humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1);
 
     if (
@@ -29,20 +30,20 @@ function playRound(humanChoice, computerChoice) {
         humanChoice === "Paper" && computerChoice === "Rock" ||
         humanChoice === "Scissors" && computerChoice === "Paper"
     ) {
-        console.log(`You win! ${humanChoice} beats ${computerChoice}.}`);
+        results.textContent = `You win! ${humanChoice} beats ${computerChoice}.`;
         return "human";
     } else if (
         humanChoice === "Rock" && computerChoice === "Paper" ||
         humanChoice === "Paper" && computerChoice === "Scissors" ||
         humanChoice === "Scissors" && computerChoice === "Rock"
     ) {
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+        results.textContent = `You lose! ${computerChoice} beats ${humanChoice}.`;
         return "computer";
     } else if (humanChoice === computerChoice) {
-        console.log("Tie! No one scores.");
+        results.textContent = "Tie! No one scores.";
         return "tie";
     } else {
-        console.log("Your input could not be interpreted. Computer wins.");
+        results.textContent = "Your input could not be interpreted. Computer wins.";
         return "computer";
     }
 }
