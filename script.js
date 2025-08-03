@@ -46,19 +46,29 @@ function playRound(humanChoice, computerChoice) {
 const buttons = document.querySelectorAll("button");
 const human = document.querySelector("#human");
 const computer = document.querySelector("#computer");
+const results = document.querySelector("#results");
 
 let humanScore = 0;
 let computerScore = 0;
+let round = 0;
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
         const roundWinner = playRound(button.id, getComputerChoice());
+
         if (roundWinner == "computer") {
             computerScore++;
+            round++;
             computer.textContent = `Computer Score: ${computerScore}`;
         } else if (roundWinner == "human") {
+            round++;
             humanScore++;
             human.textContent = `Your Score: ${humanScore}`;
+        }
+
+        if (round == 5) {
+            results.textContent = (humanScore > computerScore ? "You" : "The computer")
+                + " won the game! But you can continue playing.";
         }
     });
 });
