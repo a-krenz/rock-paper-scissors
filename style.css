@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 50px;
+    gap: 30px;
+}
+
+div,
+button {
+    font-size: x-large;
+}
+
+#result-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
