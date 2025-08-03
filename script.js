@@ -46,29 +46,3 @@ function playRound(humanChoice, computerChoice) {
         return "computer";
     }
 }
-
-function playGame() {
-    let humanScore = 0;
-    let computerScore = 0;
-    let roundWinner;
-
-    for (let i = 0; i < 5; i++) {
-        roundWinner = playRound(getHumanChoice(), getComputerChoice());
-
-        if (roundWinner === "human") {
-            humanScore++;
-        } else if (roundWinner === "computer") {
-            computerScore++;
-        } else {
-            i--;
-        }
-    }
-
-    if (humanScore > computerScore) {
-        console.log(`You win with a score of ${humanScore}!`);
-    } else {
-        console.log(`You lose to the computer. Your score is ${humanScore}.`);
-    }
-}
-
-playGame();
