@@ -16,11 +16,6 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    return prompt("Enter your choice:");
-}
-
-
 function playRound(humanChoice, computerChoice) {
     const results = document.querySelector("#results");
     humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1);
